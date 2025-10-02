@@ -1,40 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Travel Recommendation Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Us — Travelly</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Travelly</a>
+      <button id="nav-toggle-3" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav id="main-nav-3" class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html" class="active">Contact Us</a></li>
+          <li><a href="index.html#recommendations">Recommendations</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Header with Navigation Bar -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+  <main class="container contact-page">
+    <h1>Contact Us</h1>
+    <p class="lead">Questions, suggestions or partnership inquiries? Send us a message — we'll get back to you.</p>
 
-    <!-- Contact Form -->
-    <main>
-        <h1>Contact Us</h1>
-        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
+    <form id="contact-form" class="contact-form" novalidate>
+      <label>
+        Name
+        <input type="text" id="name" name="name" placeholder="Your name" required />
+      </label>
 
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
+      <label>
+        Email
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+      </label>
 
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+      <label>
+        Subject
+        <input type="text" id="subject" name="subject" placeholder="Subject (optional)" />
+      </label>
 
-            <input type="submit" value="Send">
-        </form>
-    </main>
+      <label>
+        Message
+        <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+      </label>
 
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <div id="form-success" class="form-success" hidden>
+      <h3>Thanks — your message was sent!</h3>
+      <p>We appreciate your message. (This demo does not send emails — add a backend or use a form service for live sending.)</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year-3"></span> Travelly</p>
+      <p><a href="https://github.com/88-nourhansalem/travle-website" target="_blank" rel="noopener">GitHub repository</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
