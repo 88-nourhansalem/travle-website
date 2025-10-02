@@ -1,53 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Recommendation Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Travelly — Discover Your Next Trip</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Travelly</a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav id="main-nav" class="nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#recommendations">Recommendations</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Header with Navigation Bar -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Find your perfect destination</h1>
+        <p class="lead">Personalized travel suggestions, vivid images, and easy planning — discover beaches, temples and country-based recommendations tailored to your interests.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#recommendations">See Recommendations</a>
+          <a class="btn btn-outline" href="about.html">Learn About Us</a>
+        </div>
+      </div>
+    </section>
 
-    <!-- Main Content -->
-    <main>
-        <h1>Welcome to Our Travel Recommendation Website</h1>
-        <p>Find your ideal travel destination based on your preferences!</p>
+    <section id="recommendations" class="container recommendations">
+      <h2>Top Recommendations</h2>
 
-        <!-- Beach Recommendation -->
-        <section class="recommendation">
-            <h2>Beach Recommendation: Maldives</h2>
-            <img src="https://raw.githubusercontent.com/88-nourhansalem/travle-website/main/maldives1.jpg" alt="Maldives Beach 1">
-            <img src="https://raw.githubusercontent.com/88-nourhansalem/travle-website/main/maldives2.jpg" alt="Maldives Beach 2">
-            <p>Enjoy the pristine beaches of the Maldives with crystal-clear waters and vibrant coral reefs.</p>
-        </section>
+      <!-- Beach Recommendation -->
+      <article class="recommendation">
+        <div class="rec-header">
+          <h3>Beach Recommendation — Maldives</h3>
+          <p class="rec-sub">White sands, turquoise waters — perfect for relaxation and snorkeling.</p>
+        </div>
+        <div class="rec-body">
+          <div class="carousel" data-images='["images/maldives1.jpg","images/maldives2.jpg"]' aria-label="Maldives images">
+            <button class="carousel-btn prev" aria-label="Previous image">‹</button>
+            <img src="images/maldives1.jpg" alt="Maldives beach" class="carousel-image" />
+            <button class="carousel-btn next" aria-label="Next image">›</button>
+          </div>
+          <div class="rec-info">
+            <p><strong>Highlights:</strong> Overwater bungalows, snorkeling with reef fish, tranquil sunsets.</p>
+            <p><strong>Best months:</strong> November — April.</p>
+          </div>
+        </div>
+      </article>
 
-        <!-- Temple Recommendation -->
-        <section class="recommendation">
-            <h2>Temple Recommendation: Angkor Wat</h2>
-            <img src="https://raw.githubusercontent.com/88-nourhansalem/travle-website/main/angkor-wat1.jpg" alt="Angkor Wat Temple 1">
-            <img src="https://raw.githubusercontent.com/88-nourhansalem/travle-website/main/angkor-wat2.jpg" alt="Angkor Wat Temple 2">
-            <p>Explore the historic and magnificent Angkor Wat temple in Cambodia, one of the largest religious monuments in the world.</p>
-        </section>
+      <!-- Temple Recommendation -->
+      <article class="recommendation">
+        <div class="rec-header">
+          <h3>Temple Recommendation — Angkor Wat (Cambodia)</h3>
+          <p class="rec-sub">Historic temples and stunning sunrise views over the moats and towers.</p>
+        </div>
+        <div class="rec-body">
+          <div class="carousel" data-images='["images/angkor-wat1.jpg","images/angkor-wat2.jpg"]' aria-label="Angkor Wat images">
+            <button class="carousel-btn prev" aria-label="Previous image">‹</button>
+            <img src="images/angkor-wat1.jpg" alt="Angkor Wat temple" class="carousel-image" />
+            <button class="carousel-btn next" aria-label="Next image">›</button>
+          </div>
+          <div class="rec-info">
+            <p><strong>Highlights:</strong> Ancient stone carvings, sunrise at the main temple, nearby markets and food stalls.</p>
+            <p><strong>Tips:</strong> Hire a local guide and arrive early for sunrise crowds.</p>
+          </div>
+        </div>
+      </article>
 
-        <!-- Country Recommendation -->
-        <section class="recommendation">
-            <h2>Country Recommendation: Japan</h2>
-            <img src="https://raw.githubusercontent.com/88-nourhansalem/travle-website/main/japan1.jpg" alt="Japan City View">
-            <img src="https://raw.githubusercontent.com/88-nourhansalem/travle-website/main/japan2.jpg" alt="Japan Temple">
-            <p>Visit Japan for its rich history, vibrant cities, and stunning temples.</p>
-        </section>
-    </main>
+      <!-- Country-based Recommendation -->
+      <article class="recommendation">
+        <div class="rec-header">
+          <h3>Recommendation by Country — Japan</h3>
+          <p class="rec-sub">Culture, cuisine, and modern-meets-traditional experiences across cities and countryside.</p>
+        </div>
+        <div class="rec-body">
+          <div class="carousel" data-images='["images/japan1.jpg","images/japan2.jpg"]' aria-label="Japan images">
+            <button class="carousel-btn prev" aria-label="Previous image">‹</button>
+            <img src="images/japan1.jpg" alt="Japan city view" class="carousel-image" />
+            <button class="carousel-btn next" aria-label="Next image">›</button>
+          </div>
+          <div class="rec-info">
+            <p><strong>Highlights:</strong> Food markets, temples, efficient rail system, cherry blossoms (seasonal).</p>
+            <p><strong>Suggested route:</strong> Tokyo → Kyoto → Osaka → Hiroshima.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
 
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Travelly • Built for Coursera final project</p>
+      <p><a href="https://github.com/88-nourhansalem/travle-website" target="_blank" rel="noopener">GitHub repository</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
